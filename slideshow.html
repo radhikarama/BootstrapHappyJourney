@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    .slideimg {
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    .mySlides{
+        /* animation-name: rotate; */
+         animation-duration: 1s;
+         
+    }
+    
+    </style>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="carousel slide" id="slideshow" data-ride="carousel">
+            <!--Inner carousel-->
+        <div class="slide-container" >
+           
+           <div class="mySlides">
+            <img src="Assests/img1.jfif" style="width:80%;height:500px;">
+           </div>
+      
+        <!--slide 1-->
+        <div class="mySlides slideimg">
+            <img src="Assests/img2.jfif" style="width:80%;height:500px;">
+                       </div>
+         <!--slide2-->            
+       
+           <div class="mySlides">
+<img src="Assests/img3.jfif" style="width:80%;height:500px;opacity:0.6;">
+           </div>
+         
+           <!--slide 3-->
+           
+      
+    </div>
+    <!--carousel slide -->
+    </div>
+    <!--End Row-->
+    </div>
+    <!--container-->
+    <!--script-->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+         
+
+          if (slideIndex > slides.length) {slideIndex = 1}    
+         
+          slides[slideIndex-1].style.display = "block";  
+         setTimeout(showSlides, 2000); // Change image every 2 seconds
+             
+        }
+        </script>
+    <!--end script-->
+</body>
+</html>
